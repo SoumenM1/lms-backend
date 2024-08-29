@@ -58,12 +58,12 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-
-
+### baseurl: `http://localhost:5000`
 1. Introduction
 This document provides details on how to test the various API endpoints for the project. Each section includes the endpoint, method, request parameters, and expected responses.
 
 2. Authentication APIs
+#
 2.1 Register User
 Endpoint: /auth/register
 Method: POST
@@ -84,6 +84,7 @@ Copy code
   "message": "User registered successfully"
 }
 
+#
 2.2 Login User
 Endpoint: /auth/login
 Method: POST
@@ -104,6 +105,7 @@ Copy code
   "access_token": "JWT_TOKEN"
 }
 
+#
 2.3 Logout User
 Endpoint: /auth/logout
 Method: POST
@@ -120,6 +122,7 @@ Copy code
 }
 
 3. Question Management APIs (Admin Only)
+#
 3.1 Create Question
 Endpoint: /questions
 Method: POST
@@ -145,7 +148,7 @@ Copy code
   "questionId": "QUESTION_ID"
 }
 
-
+#
 3.2 Get All Questions
 Endpoint: /questions
 Method: GET
@@ -168,7 +171,7 @@ Copy code
   ...
 ]
 
-
+#
 3.3 Get Question by ID
 Endpoint: /questions/:id
 Method: GET
@@ -188,6 +191,7 @@ Copy code
   "correctAnswer": "Paris"
 }
 
+#
 3.4 Update Question
 Endpoint: /questions/:id
 Method: PUT
@@ -212,6 +216,7 @@ Copy code
   "message": "Question updated successfully"
 }
 
+#
 3.5 Delete Question
 Endpoint: /questions/:id
 Method: DELETE
@@ -228,6 +233,7 @@ Copy code
 }
 
 4. Test Management APIs (End User)
+#
 4.1 Get Test by Unique URL
 Endpoint: /tests/unique/:uniqueURL
 Method: GET
@@ -243,6 +249,7 @@ Copy code
   "questions": [...]
 }
 
+#
 4.2 Start Adaptive Test
 Endpoint: /tests/:testId/start
 Method: POST
@@ -264,6 +271,7 @@ Copy code
   }
 }
 
+#
 4.3 Submit Answer
 Endpoint: /tests/:testId/questions/:questionId/answer
 Method: POST
@@ -292,6 +300,7 @@ Copy code
 }
 
 5. Test Results APIs (Admin Only)
+#
 5.1 Get Test Results
 Endpoint: /tests/:testId
 Method: GET
